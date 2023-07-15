@@ -1,22 +1,23 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- * Return: Forward 0(success)
+ * main - code entry
+ * Return: Forward 0 (success)
  *
  */
 
 int main(void)
 {
 char p;
+
 p = 'a';
+p = 'A';
 
 while
-	(p <= 'z')	{
-putchar (p);
+(p <= 'z')	{
+putchar(p);
 p++;
 }
-
 putchar('\n');
 return (0);
 }
