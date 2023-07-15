@@ -9,15 +9,23 @@
 int main(void)
 {
 char p;
+char t;
 
 p = 'a';
-p = 'A';
+t = 'A';
 
 while
 (p <= 'z')	{
 putchar(p);
 p++;
 }
+
+while
+(t <= 'Z')	{
+putchar(t);
+t++;
+}
+
 putchar('\n');
 return (0);
 }
