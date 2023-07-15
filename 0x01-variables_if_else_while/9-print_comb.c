@@ -9,28 +9,18 @@
 
 int main(void)
 {
-int digit = 0;
+int h;
 
-while
-(digit < 10)
-putchar(digit + '0');
-digit++;
+for (h = 0; h < 10; h++)
 
-if (digit < 10)
-putchar(','; ' ');
+{
+putchar(h + 10);
+if (h < 9)
 
-if
-(digit == 10)
-int ones = 0;
+putchar(',');
+putchar(',');
+}
 
-while
-(ones < 10)
-putchar('0'; ','; ' '; ones + '0');
-ones++;
-         
-if
-(ones < 10)
-putchar(',';' ');
-
+putchar('\n');
 return (0);
 }
