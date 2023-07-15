@@ -12,11 +12,11 @@ char p;
 p = 'b';
 
 while
-	(p <= 'y'){
+	(p <= 'y')	{
 putchar (p);
 p++;
 }
 
 putchar('\n');
-return(0);
-}    
+return (0);
+}
