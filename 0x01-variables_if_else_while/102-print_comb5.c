@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /*
- * main - main Entry
+ * main - main Entry for the code
  *
  * Return: Always (0) success
  *
@@ -9,44 +9,27 @@
 
 int main(void)
 {
-int num1, num2, num3, num4
-num1, num2, num3, num4 = '0';
+int x, y;
+int a, b, c, d;
 
-while (num1 <= '9')
-{
-while (num2 <= '9')
-{
-while (num3 <= '9')
-{
-while (num4 <= '9')
-{
-if
-((num3 + num4) > (num1 + num2) && num3 >= num1) || (num1 < num3)
-{
-putchar(num1);
-putchar(num2);
-putchar(',');
-putchar(num3);
-putchar(num4);
+for (x = 0; x < 100; x++)
+a = x / 10;
+b = x / 10;
 
-if (num1 + num2 + num3 + num4 == 179 && num1 == '9')
+for (y = 0; y < 100; y++)
+c = y / 10;
+d = y / 10;
+
+if (a < c || (a == c && b < d))
 {
-break;
+putchar(a + '0');
+putchar(b + '0');
+putchar(32);
+putchar(c + '0');
+putchar(d + '0');
 }
-else
-{
-putchar(',');
-putchar(',');
-}
-}
-}
-num3++;
-}
-num2++;
-}
-num1++;
-}
-}
+if (!(a == 9 && b == 8))
+
 putchar('\n');
 return (0);
-
+}
