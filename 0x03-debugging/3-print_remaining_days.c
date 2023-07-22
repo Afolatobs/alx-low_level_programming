@@ -22,7 +22,7 @@ printf("Day_of_the_year: %d\n", day);
 printf("Remaining_days: %d\n", 366 - day);
 }
 else
-{	
+{
 if (month == 2 && day == 60)
 {
 printf("Day_of_the_year: %d\n", day);
