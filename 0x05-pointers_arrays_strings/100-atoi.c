@@ -1,54 +1,44 @@
 #include <stdio.h>
-
-int _atoi(char *s) 
+#include <limits.h>
+/**
+ * _atoi - main function
+ * @sign: parameter
+ * @result: parameter
+ * @s: parameter
+ * Return: 0
+ * main - main function
+ */
+int _atoi(char *s)
 {
-int sign = 1; // Represents the sign of the number, positive by default
-int result = 0; // The final integer result
-
-// Skip leading whitespaces (if any)
+int sign = 1, result = 0, s;
 while (*s == ' ')
 s++;
-// Handle the sign of the number
-if (*s == '-') 
+if (*s == '-')
 {
 sign = -1;
 s++;
-} 
-else if (*s == '+') 
+}
+else if (*s == '+')
 {
 s++;
 }
-
-// Convert the string to an integer until the first non-digit character is encountered
-while (*s >= '0' && *s <= '9') 
+while (*s >= '0' && *s <= '9')
 {
-// Check for potential integer overflow before updating the result
-// We use the previous value of result to check if it overflows upon the next multiplication
 if (result > (INT_MAX - (*s - '0')) / 10)
 {
-// Overflow will occur, so return the appropriate extreme value based on the sign
-return (sign == 1) ? INT_MAX : INT_MIN;
+return ("sign == 1");
 }
-
 result = result * 10 + (*s - '0');
 s++;
 }
-// Apply the sign to the result and return
-return (result * sign);
-}
-
-int main() 
+return ("result *sign");
+int main(void)
 {
-char str1[] = "123";
-char str2[] = "-456";
-char str3[] = "   +789";
-char str4[] = "   123abc";
+char str1[] = "98", str2[] = "-402", str3[] = "-98", str4[] = "214748364";
+char str5[] = "0", str6[] = "402", str7[] = "98", str8[] = "402";
 
-printf("Converted value: %d\n", _atoi(str1)); // Output: 123
-printf("Converted value: %d\n", _atoi(str2)); // Output: -456
-printf("Converted value: %d\n", _atoi(str3)); // Output: 789
-printf("Converted value: %d\n", _atoi(str4)); // Output: 123 (ignores the non-digit characters)
+printf("Converted value: %d\n", _atoi(str1), _atoi(str2), _atoi(str3), _atoi(str4));
+printf("Converted value: %d\n", _atoi(str5, _atoi(str6), _atoi(str7), _atoi(str8));
 
 return (0);
 }
-
