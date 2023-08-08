@@ -1,5 +1,8 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
+#include <stddef.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 int _putchar(char c);
 char *create_array(unsigned int size, char c);
