@@ -2,33 +2,39 @@
 
 /**
  * print_list - function
- * @h: node
- * Return: h
+ * main - function
+ * @h: list_t
+ * @list_t: node
+ * Return: 0
  */
 
 size_t print_list(const list_t *h)
 {
-	list_t *h = h();
+	if (str == NULL)
+	{
+	printf("[0] (nil)\n");
+	}
 
-	if (is_empty(list_t))
-	printf("list_t is empty.\n");
+	else
+	{
+		printf("the list_t is empty.\n");
+	}
+
+	return (list_t);
 }
 
-list_t *h
+int main(void)
 {
-	list_t *h = malloc(sizeof(list_t))
-	
-	list_t->head = NULL;
-	list_t->tail = NULL;
-	list_t->size = 0;
-}
+	list_t *h;
+	list_t *dou;
+	list_t *trois;
 
-size_t (list_t *h)
-{
-	return list_t->size;
-}
+	h->len = NULL;
+	h->next = dou;
+	dou->len == NULL;
+	dou->next == trois;
+	trois->len == NULL;
+	trois->next == NULL;
 
-bool is_empty(list_t *h)
-{
-	return (list_t->size == 0);
+	return (0);
 }
