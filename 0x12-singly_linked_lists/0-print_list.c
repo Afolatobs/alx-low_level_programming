@@ -8,19 +8,16 @@
 
 size_t print_list(const list_t *h)
 {
-	size_t trois = 0;
+	size_t num_len = 0;
 
 	while (h)
 	{
-	if (!h->str)
+	if (h == NULL)
 	printf("[0] (nil)\n");
-	else
-	printf("[%u] %s\n", h->len, h->str);
 
-	trois++;
+	num_len++;
 	}
 
-
-	return (0);
+	return (num_len);
 }
 
