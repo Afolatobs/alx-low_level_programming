@@ -12,12 +12,10 @@ listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t *adnote = malloc(sizeof(listint_t));
 
-	if (adnote != NULL)
-	{
+	while (*head != NULL)
 	adnote->n = n;
 	adnote->next = *head;
 	*head = adnote;
-	}
 
 	return (adnote);
 }
