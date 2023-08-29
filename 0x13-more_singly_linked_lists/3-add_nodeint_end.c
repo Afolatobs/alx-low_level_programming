@@ -22,13 +22,16 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	nat_ol->next = NULL;
 
 	if (*head == NULL)
+	{
 		*head = nat_ol;
+	}
 	else
 	{
 	listint_t *cate = *head;
 	while (cate->next != NULL)
+	{
 		cate = cate->next;
-
+	}
 	cate->next = nat_ol;
 	}
 	return (nat_ol);
