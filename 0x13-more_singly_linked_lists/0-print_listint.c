@@ -4,18 +4,19 @@
  * print_listint - the main function
  * @h: head node
  *
- * Return: 0
+ * Return: the number of element
  */
 
 size_t print_listint(const listint_t *h)
 {
-	size_t n = 0;
+	size_t data = 0;
 
 	while (h)
 	{
 		printf("%d\n", h->n);
-		n++;
+		data++;
 		h = h->next;
 	}
-	return (n);
+
+	return (data);
 }
